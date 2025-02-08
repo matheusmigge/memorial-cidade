@@ -1,20 +1,34 @@
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./App.css";
+import L from "leaflet";
 
 function App() {
+  const customIcon = L.divIcon({
+    className: "custom-marker",
+    html: `<div class="marker-circle" style="background-color: #34A0A4;">
+              <img src="/src/assets/svg-icons/shooting-angles/ground-level.svg" alt="marker-icon" />
+           </div>`,
+    iconSize: [38, 38],
+    iconAnchor: [19, 19],
+    popupAnchor: [0, -20], 
+  });
+
   return (
-    <MapContainer center={[-8.0433112, -34.934217]} zoom={13} className="map-container">
+    <MapContainer
+      center={[-8.0433112, -34.934217]}
+      zoom={13}
+      className="map-container"
+    >
       <TileLayer
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
-      // url="https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png" <<< minimalist version 
       />
-      <Marker position={[-8.0638485,-34.8750566]}>
+      <Marker position={[-8.0638485, -34.8750566]} icon={customIcon}>
         <Popup>
           <img
             src="https://blogs.diariodepernambuco.com.br/diretodaredacao/wp-content/uploads/2017/02/m_berzin.jpg"
-            style={{ width: "100%", borderRadius: "5px" }}
+            style={{ width: "100%", borderRadius: "15px" }}
           />
 
           <div className="text-container">
@@ -40,7 +54,7 @@ function App() {
 
             <div className="tag">
               <img src="/src/assets/svg-icons/theme.svg" />
-              <h1>Bairro do Recife</h1>
+              <h1>Bondes</h1>
             </div>
 
             <div className="tag">

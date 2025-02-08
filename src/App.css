@@ -9,17 +9,25 @@
 }
 
 .leaflet-popup-tip {
-    background-color: rgba(0, 0, 0, 0);
+    display: none;
 }
 
-.map-container .leaflet-popup-content h1 {
+.leaflet-popup-close-button {
+    display: none;
+}
+
+.map-container .leaflet-popup-content {
+    width: 200px;
+}
+
+.map-container .text-container h1 {
     font-size: 16px;
     color: #fff;
     font-weight: bold;
     text-align: center;
 }
 
-.map-container .leaflet-popup-content p {
+.map-container .text-container p {
     font-size: 10px;
     color: #fff;
     text-align: center;
@@ -42,6 +50,7 @@
 
 .tag {
     display: flex;
+    align-items: center;
     gap: 10px;
     padding: 7px;
     background-color: #757575;
@@ -53,5 +62,30 @@
 }
 
 .tag h1 {
-    font-size: 16px;
+    font-size: 14px;
 }
+
+.custom-marker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+  }
+  
+  .marker-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background-color: #2C2C2C; /* Cor personalizável */
+    border: 4px solid white; /* Borda opcional */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .marker-circle img {
+    width: 24px; /* Ajuste conforme necessário */
+    height: 24px;
+  }
