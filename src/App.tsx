@@ -130,7 +130,7 @@ function App() {
         </Popup>
       </Marker>
 
-      <Polygon pathOptions={{ color: "blue" }} positions={[trianglePoints]} />
+      <Polygon pathOptions={{ color: "red" }} positions={[trianglePoints]} />
     </MapContainer>
   );
 }
