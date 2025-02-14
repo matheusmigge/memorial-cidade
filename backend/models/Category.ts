@@ -4,5 +4,5 @@ export type Category = {
     id: number;
     name: string;
     iconURL: string;
-    subcategories?: Subcategory[];
+    subcategoryIds?: number[];
 }

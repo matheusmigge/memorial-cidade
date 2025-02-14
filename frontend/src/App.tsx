@@ -2,6 +2,7 @@ import { MapContainer, Marker, Polygon, Popup, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./App.css";
 import L from "leaflet";
+import React from "react";
 
 function App() {
   const customIcon = L.divIcon({

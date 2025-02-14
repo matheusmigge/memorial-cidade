@@ -1,20 +1,17 @@
 [
     {
         "id": 1,
-        "name": "Histórico",
-        "iconURL": "https://example.com/icons/historic.png",
-        "categoryId": 1
+        "name": "Bairro do Recife",
+        "categoryId": 5
     },
     {
         "id": 2,
-        "name": "Religioso",
-        "iconURL": "https://example.com/icons/religious.png",
-        "categoryId": 2
+        "name": "Bondes",
+        "categoryId": 3
     },
     {
         "id": 3,
-        "name": "Pessoas",
-        "iconURL": "https://example.com/icons/people.png",
-        "categoryId": 4
+        "name": "Cotidiano",
+        "categoryId": 3
     }
 ]
