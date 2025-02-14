@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "name": "Arquitetura",
+        "iconURL": "https://example.com/icons/architecture.png",
+        "subcategories": [
+            {
+                "id": 2,
+                "name": "Igrejas",
+                "iconURL": "https://example.com/icons/church.png"
+            },
+            {
+                "id": 3,
+                "name": "Edifícios Históricos",
+                "iconURL": "https://example.com/icons/historic-building.png"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Vida Urbana",
+        "iconURL": "https://example.com/icons/urban.png",
+        "subcategories": []
+    }
+]
