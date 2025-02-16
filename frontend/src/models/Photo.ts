@@ -1,6 +1,9 @@
+import { Subcategory } from "./Subcategory";
+import { Tag } from "./Tag";
+
 export type Photo = {
     id: number;
-    viewCategoryId: number;
+    viewSubcategory: Subcategory;
     url: string;
     yearStart: number;
     yearEnd?: number | null;
@@ -9,7 +12,7 @@ export type Photo = {
     sourceCollection?: string | null;
     sourceReference?: string | null;
     sourceLink?: string | null;
-    tagIds: number[];
+    tags: Tag[];
     coordinates: [number, number]
     compassDirection: number;
     contributorName: string;
