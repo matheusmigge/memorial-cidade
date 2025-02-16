@@ -1,9 +1,11 @@
+import { Decade } from "./Decade";
 import { Subcategory } from "./Subcategory";
 import { Tag } from "./Tag";
 
 export type Photo = {
     id: number;
     viewSubcategory: Subcategory;
+    decades: Decade[];
     url: string;
     yearStart: number;
     yearEnd?: number | null;

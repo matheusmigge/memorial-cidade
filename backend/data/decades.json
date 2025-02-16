@@ -1,0 +1,87 @@
+[
+    {
+      "id": 1,
+      "name": "<1900s",
+      "colorHex": "#D9ED92",
+      "yearStart": 1,
+      "yearEnd": 1899
+    },
+    {
+      "id": 2,
+      "name": "1900s",
+      "colorHex": "#B5E48C",
+      "yearStart": 1900,
+      "yearEnd": 1909
+    },
+    {
+      "id": 3,
+      "name": "1910s",
+      "colorHex": "#99D98C",
+      "yearStart": 1910,
+      "yearEnd": 1919
+    },
+    {
+      "id": 4,
+      "name": "1920s",
+      "colorHex": "#76C893",
+      "yearStart": 1920,
+      "yearEnd": 1929
+    },
+    {
+      "id": 5,
+      "name": "1930s",
+      "colorHex": "#52B69A",
+      "yearStart": 1930,
+      "yearEnd": 1939
+    },
+    {
+      "id": 6,
+      "name": "1940s",
+      "colorHex": "#34A0A4",
+      "yearStart": 1940,
+      "yearEnd": 1949
+    },
+    {
+      "id": 7,
+      "name": "1950s",
+      "colorHex": "#168AAD",
+      "yearStart": 1950,
+      "yearEnd": 1959
+    },
+    {
+      "id": 8,
+      "name": "1960s",
+      "colorHex": "#1A759F",
+      "yearStart": 1960,
+      "yearEnd": 1969
+    },
+    {
+      "id": 9,
+      "name": "1970s",
+      "colorHex": "#1E6091",
+      "yearStart": 1970,
+      "yearEnd": 1979
+    },
+    {
+      "id": 10,
+      "name": "1980s",
+      "colorHex": "#184E77",
+      "yearStart": 1980,
+      "yearEnd": 1989
+    },
+    {
+      "id": 11,
+      "name": "1990s",
+      "colorHex": "#113775",
+      "yearStart": 1990,
+      "yearEnd": 1999
+    },
+    {
+      "id": 12,
+      "name": ">2000s",
+      "colorHex": "#0A2133",
+      "yearStart": 2000,
+      "yearEnd": 3000
+    }
+  ]
+  
