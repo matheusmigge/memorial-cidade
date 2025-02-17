@@ -5,3 +5,5 @@ export type Decade = {
     yearStart: number;
     yearEnd: number;
 }
+
+export default Decade;

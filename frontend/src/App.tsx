@@ -1,10 +1,20 @@
-import { MapContainer, Marker, Polygon, Popup, TileLayer } from "react-leaflet";
+import { MapContainer, Marker, Polygon, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./App.css";
 import L from "leaflet";
-import React from "react";
+import React, { useEffect, useState } from "react";
+import PhotoPreview from "./components/Photo/PhotoPreview/PhotoPreview";
+import Photo from "./models/Photo";
 
 function App() {
+  const [photos, setPhotos] = useState<Photo[]>([]);
+
+  const fetchPhotos = async () => {
+    const response = await fetch("http://localhost:3000/photos");
+    const data = await response.json();
+    setPhotos(data);
+  };
+
   const customIcon = L.divIcon({
     className: "custom-marker",
     html: `<div class="marker-circle" style="background-color: #34A0A4;">
@@ -15,6 +25,10 @@ function App() {
     popupAnchor: [0, -20],
   });
 
+  useEffect(() => {
+    fetchPhotos(); // Chama a função para buscar as fotos
+  }, []);
+
   type LatLng = [number, number];
 
   const vertex: LatLng = [-8.0638485, -34.8750566]; // Coordenadas do vértice
@@ -22,13 +36,20 @@ function App() {
   const height = 100; // Altura do triângulo (em metros)
   const rotationAngle = 80; // Rotação do triângulo (em graus)
 
-  const metersToDegrees = (meters: number, latitude: number): [number, number] => {
+  const metersToDegrees = (
+    meters: number,
+    latitude: number
+  ): [number, number] => {
     const latDegrees = meters / 111111; // 1 grau ≈ 111111 metros
     const lonDegrees = meters / (111111 * Math.cos((latitude * Math.PI) / 180));
     return [latDegrees, lonDegrees];
   };
 
-  const rotatePoint = (point: LatLng, center: LatLng, angle: number): LatLng => {
+  const rotatePoint = (
+    point: LatLng,
+    center: LatLng,
+    angle: number
+  ): LatLng => {
     const rad = (angle * Math.PI) / 180; // Converter para radianos
     const [latC, lonC] = center;
     const [latP, lonP] = point;
@@ -78,7 +99,12 @@ function App() {
     return [vertex, rotatedB, rotatedC];
   };
 
-  const trianglePoints = calculateTriangleByHeight(vertex, baseAngle, height, rotationAngle);
+  const trianglePoints = calculateTriangleByHeight(
+    vertex,
+    baseAngle,
+    height,
+    rotationAngle
+  );
 
   return (
     <MapContainer
@@ -90,46 +116,14 @@ function App() {
         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>'
         url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
       />
-      <Marker position={vertex} icon={customIcon}>
-        <Popup>
-          <img
-            src="https://blogs.diariodepernambuco.com.br/diretodaredacao/wp-content/uploads/2017/02/m_berzin.jpg"
-            style={{ width: "100%", borderRadius: "15px" }}
-          />
 
-          <div className="text-container">
-            <h1>1944 - Bairro do Recife, Ponte Maurício de Nassau</h1>
-            <p>© Acervo do Museu da Cidade do Recife</p>
-          </div>
-
-          <div className="tag-container">
-            <div className="tag">
-              <img src="/src/assets/svg-icons/decade.svg" />
-              <h1>1940s</h1>
-            </div>
-
-            <div className="tag">
-              <img src="/src/assets/svg-icons/shooting-angles/ground-level.svg" />
-              <h1>Vista à pé</h1>
-            </div>
-
-            <div className="tag">
-              <img src="/src/assets/svg-icons/neighborhood.svg" />
-              <h1>Bairro do Recife</h1>
-            </div>
-
-            <div className="tag">
-              <img src="/src/assets/svg-icons/theme.svg" />
-              <h1>Bondes</h1>
-            </div>
-
-            <div className="tag">
-              <img src="/src/assets/svg-icons/theme.svg" />
-              <h1>Cotidiano</h1>
-            </div>
-          </div>
-        </Popup>
-      </Marker>
+      {photos.map((photo) => {
+        return (
+          <Marker key={photo.id} position={photo.coordinates} icon={customIcon}>
+            <PhotoPreview photo={photo}></PhotoPreview>
+          </Marker>
+        );
+      })}
 
       <Polygon pathOptions={{ color: "red" }} positions={[trianglePoints]} />
     </MapContainer>

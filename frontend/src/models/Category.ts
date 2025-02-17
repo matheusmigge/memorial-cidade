@@ -6,3 +6,5 @@ export type Category = {
     iconURL: string;
     subcategorys?: Subcategory[] | null;
 }
+
+export default Category;

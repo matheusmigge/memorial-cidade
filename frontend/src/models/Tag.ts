@@ -5,3 +5,5 @@ export type Tag = {
     name: string;
     category: Category;
 }
+
+export default Tag;

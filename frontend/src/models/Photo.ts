@@ -9,7 +9,7 @@ export type Photo = {
     url: string;
     yearStart: number;
     yearEnd?: number | null;
-    title?: string | null;
+    title: string;
     author?: string | null;
     sourceCollection?: string | null;
     sourceReference?: string | null;
@@ -21,3 +21,5 @@ export type Photo = {
     contributorComment: string;
     publicationDate: Date;
 }
+
+export default Photo;
