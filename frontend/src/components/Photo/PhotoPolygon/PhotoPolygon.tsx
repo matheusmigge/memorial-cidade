@@ -13,7 +13,7 @@ function PhotoPolygon({ photo }: PhotoViewProps) {
   const vertex: LatLng = photo.coordinates; // Coordenadas do vértice
   const baseAngle = 42; // Ângulo de abertura do triângulo
   const height = 100; // Altura do triângulo (em metros)
-  const rotationAngle = 80; // Rotação do triângulo (em graus)
+  const rotationAngle = photo.compassDirection; // Rotação do triângulo (em graus)
 
   const metersToDegrees = (
     meters: number,
@@ -86,6 +86,7 @@ function PhotoPolygon({ photo }: PhotoViewProps) {
   );
 
   return (
+    
     <Polygon pathOptions={{ color: "red" }} positions={[trianglePoints]} />
   );
 }

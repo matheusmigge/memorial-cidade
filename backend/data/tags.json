@@ -1,17 +1,37 @@
 [
-    {
-        "id": 1,
-        "name": "Bairro do Recife",
-        "categoryId": 5
-    },
-    {
-        "id": 2,
-        "name": "Bondes",
-        "categoryId": 3
-    },
-    {
-        "id": 3,
-        "name": "Cotidiano",
-        "categoryId": 3
-    }
+  {
+    "id": 1,
+    "name": "Bairro do Recife",
+    "categoryId": 5
+  },
+  {
+    "id": 2,
+    "name": "Bondes",
+    "categoryId": 3
+  },
+  {
+    "id": 3,
+    "name": "Cotidiano",
+    "categoryId": 3
+  },
+  {
+    "id": 4,
+    "name": "Letreiros",
+    "categoryId": 3
+  },
+  {
+    "id": 5,
+    "name": "Ponte Duarte Coelho",
+    "categoryId": 4
+  },
+  {
+    "id": 6,
+    "name": "Santo Antônio",
+    "categoryId": 5
+  },
+  {
+    "id": 7,
+    "name": "Igreja Matriz do Santíssimo Sacramento",
+    "categoryId": 4
+  }
 ]

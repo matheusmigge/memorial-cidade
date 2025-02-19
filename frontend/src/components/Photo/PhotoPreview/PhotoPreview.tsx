@@ -12,7 +12,7 @@ function PhotoPreview({ photo }: PhotoPreviewProps) {
       <img src={photo.url} style={{ width: "100%", borderRadius: "15px" }} />
 
       <div className="text-container">
-        <h1>{photo.title}</h1>
+        <h1>{photo.yearStart}{photo.yearEnd ? `~${photo.yearEnd}` : ""} - {photo.title}</h1>
         <p>
           {photo.author} © {photo.sourceCollection}
         </p>

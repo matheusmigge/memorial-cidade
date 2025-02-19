@@ -1,13 +1,13 @@
-import { MapContainer, Marker, TileLayer } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import "./App.css";
-import L from "leaflet";
+import { MapContainer, TileLayer } from "react-leaflet";
 import React, { useEffect, useState } from "react";
-import PhotoPreview from "./components/Photo/PhotoPreview/PhotoPreview";
 import Photo from "./models/Photo";
 import PhotoPolygon from "./components/Photo/PhotoPolygon/PhotoPolygon";
+import PhotoMarker from "./components/Photo/PhotoMarker/PhotoMarker";
 
 function App() {
+
   const [photos, setPhotos] = useState<Photo[]>([]);
 
   const fetchPhotos = async () => {
@@ -15,16 +15,6 @@ function App() {
     const data = await response.json();
     setPhotos(data);
   };
-
-  const customIcon = L.divIcon({
-    className: "custom-marker",
-    html: `<div class="marker-circle" style="background-color: #34A0A4;">
-              <img src="/assets/shooting-angles/ground-level.svg" alt="marker-icon" />
-           </div>`,
-    iconSize: [38, 38],
-    iconAnchor: [19, 19],
-    popupAnchor: [0, -20],
-  });
 
   useEffect(() => {
     fetchPhotos(); // Chama a função para buscar as fotos
@@ -44,13 +34,7 @@ function App() {
       {photos.map((photo) => {
         return (
           <>
-            <Marker
-              key={photo.id}
-              position={photo.coordinates}
-              icon={customIcon}
-            >
-              <PhotoPreview photo={photo}/>
-            </Marker>
+            <PhotoMarker photo={photo}/>
             <PhotoPolygon photo={photo}/>
           </>
         );
