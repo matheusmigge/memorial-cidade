@@ -2,37 +2,37 @@
     {
         "id": 1,
         "name": "Décadas",
-        "iconURL": "../../frontend/src/assets/svg-icons/decade.svg",
+        "iconURL": "/assets/decade.svg",
         "subcategories": null
     },
     {
         "id": 2,
         "name": "Vistas",
-        "iconURL": "../../frontend/src/assets/svg-icons/view.svg",
+        "iconURL": "/assets/view.svg",
         "subcategoryIds": [1,2,3]
     },
     {
         "id": 3,
         "name": "Temas",
-        "iconURL": "../../frontend/src/assets/svg-icons/theme.svg",
+        "iconURL": "/assets/theme.svg",
         "subcategoryIds": null
     },
     {
         "id": 4,
         "name": "Locais",
-        "iconURL": "../../frontend/src/assets/svg-icons/landmark.svg",
+        "iconURL": "/assets/landmark.svg",
         "subcategoryIds": null
     },
     {
         "id": 5,
         "name": "Bairros",
-        "iconURL": "../../frontend/src/assets/svg-icons/neighborhood.svg",
+        "iconURL": "/assets/neighborhood.svg",
         "subcategoryIds": null
     },
     {
         "id": 6,
         "name": "Especiais",
-        "iconURL": "../../frontend/src/assets/svg-icons/special.svg",
+        "iconURL": "/assets/special.svg",
         "subcategoryIds": null
     }
 ]

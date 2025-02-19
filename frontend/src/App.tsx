@@ -18,7 +18,7 @@ function App() {
   const customIcon = L.divIcon({
     className: "custom-marker",
     html: `<div class="marker-circle" style="background-color: #34A0A4;">
-              <img src="/src/assets/svg-icons/shooting-angles/ground-level.svg" alt="marker-icon" />
+              <img src="/assets/shooting-angles/ground-level.svg" alt="marker-icon" />
            </div>`,
     iconSize: [38, 38],
     iconAnchor: [19, 19],
