@@ -15,7 +15,7 @@ function App() {
   };
 
   useEffect(() => {
-    fetchPhotos(); // Chama a função para buscar as fotos
+    fetchPhotos();
   }, []);
 
   return (
