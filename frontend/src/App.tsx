@@ -3,11 +3,9 @@ import "./App.css";
 import { MapContainer, TileLayer } from "react-leaflet";
 import React, { useEffect, useState } from "react";
 import Photo from "./models/Photo";
-import PhotoPolygon from "./components/Photo/PhotoPolygon/PhotoPolygon";
 import PhotoMarker from "./components/Photo/PhotoMarker/PhotoMarker";
 
 function App() {
-
   const [photos, setPhotos] = useState<Photo[]>([]);
 
   const fetchPhotos = async () => {
@@ -31,14 +29,9 @@ function App() {
         url="https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}{r}.png"
       />
 
-      {photos.map((photo) => {
-        return (
-          <>
-            <PhotoMarker photo={photo}/>
-            <PhotoPolygon photo={photo}/>
-          </>
-        );
-      })}
+      {photos.map((photo) => (
+        <PhotoMarker key={photo.id} photo={photo} />
+      ))}
     </MapContainer>
   );
 }
