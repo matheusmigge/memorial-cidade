@@ -10,12 +10,14 @@ interface PhotoMarkerProps {
 }
 
 function PhotoMarker({ photo }: PhotoMarkerProps) {
-  const[isPopupOpen, setIsPopupOpen] = useState(false);
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const customIcon = L.divIcon({
     className: "custom-marker",
-    html: `<div class="marker-circle" style="background-color: ${photo.decades[0].colorHex};">
-                    <img src="${photo.viewSubcategory.iconURL}" alt="marker-icon" />
+    html: `<div class="marker-circle" style="background-color: ${photo.decades[0].colorHex}; border: 4px solid ${isPopupOpen ? "black" : "white"};">
+                    <img src="${
+                      photo.viewSubcategory.iconURL
+                    }" alt="marker-icon" />
                  </div>`,
     iconSize: [38, 38],
     iconAnchor: [19, 19],
