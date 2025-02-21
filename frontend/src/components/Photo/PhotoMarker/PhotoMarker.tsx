@@ -1,3 +1,4 @@
+import "./PhotoMarker.css"
 import { Marker } from "react-leaflet";
 import Photo from "../../../models/Photo";
 import PhotoPreview from "../PhotoPreview/PhotoPreview";
@@ -13,8 +14,10 @@ function PhotoMarker({ photo }: PhotoMarkerProps) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const customIcon = L.divIcon({
-    className: "custom-marker",
-    html: `<div class="marker-circle" style="background-color: ${photo.decades[0].colorHex}; border: 4px solid ${isPopupOpen ? "black" : "white"};">
+    className: "photo-marker",
+    html: `<div class="marker-circle" style="background-color: ${
+      photo.decades[0].colorHex
+    }; border: 4px solid ${isPopupOpen ? "black" : "white"};">
                     <img src="${
                       photo.viewSubcategory.iconURL
                     }" alt="marker-icon" />
@@ -25,19 +28,21 @@ function PhotoMarker({ photo }: PhotoMarkerProps) {
   });
 
   return (
-    <Marker
-      key={photo.id}
-      position={photo.coordinates}
-      icon={customIcon}
-      eventHandlers={{
-        popupopen: () => setIsPopupOpen(true),
-        popupclose: () => setIsPopupOpen(false),
-      }}
-    >
-      <PhotoPreview photo={photo} />
+    <div className="photo-marker">
+      <Marker
+        key={photo.id}
+        position={photo.coordinates}
+        icon={customIcon}
+        eventHandlers={{
+          popupopen: () => setIsPopupOpen(true),
+          popupclose: () => setIsPopupOpen(false),
+        }}
+      >
+        <PhotoPreview photo={photo} />
 
-      {isPopupOpen && <PhotoPolygon photo={photo} />}
-    </Marker>
+        {isPopupOpen && <PhotoPolygon photo={photo} />}
+      </Marker>
+    </div>
   );
 }
 
