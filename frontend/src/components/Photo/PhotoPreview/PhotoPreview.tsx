@@ -11,7 +11,11 @@ function PhotoPreview({ photo }: PhotoPreviewProps) {
   return (
     <Popup>
       <div className="photo-preview">
-        <img src={photo.url} style={{ width: "100%", borderRadius: "15px" }} />
+        <div className="photo-container">
+          <img className="photo-img" src={photo.url} />
+
+          <button className="see-photo-button">ver foto</button>
+        </div>
 
         <div className="text-container">
           <h1>
@@ -25,10 +29,10 @@ function PhotoPreview({ photo }: PhotoPreviewProps) {
 
         <div className="tag-container">
           {photo.tags.map((tag) => (
-            <div key={tag.id} className="tag">
+            <button key={tag.id} className="tag">
               <img src={tag.category.iconURL} />
               <h1>{tag.name}</h1>
-            </div>
+            </button>
           ))}
         </div>
       </div>
