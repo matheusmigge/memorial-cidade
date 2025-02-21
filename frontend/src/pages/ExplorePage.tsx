@@ -1,4 +1,3 @@
-import "./ExplorePage.css";
 import Photo from "../models/Photo";
 import { MapContainer, TileLayer } from "react-leaflet";
 import React, { useEffect, useState } from "react";
