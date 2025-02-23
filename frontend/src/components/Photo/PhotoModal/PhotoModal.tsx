@@ -9,6 +9,7 @@ interface PhotoModalProps {
 }
 
 function PhotoModal({ photo, isOpen, onClose }: PhotoModalProps) {
+
   if (!isOpen) return null;
   if (!photo) return null;
 
@@ -46,10 +47,10 @@ function PhotoModal({ photo, isOpen, onClose }: PhotoModalProps) {
             </a>
           </div>
         </div>
-        <div className="scrollable-container">
-          <img src={photo.url}></img>
+        <div className={`scrollable-container`}>
+          <img className= {`img`} src={photo.url}></img>
           <iframe
-            className="google-street-view-embed"
+            className={`google-street-view-embed`}
             src={photo.googleStreetViewEmbedLink}
             allowFullScreen
             loading="lazy"
