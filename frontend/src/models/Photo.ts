@@ -14,6 +14,7 @@ export type Photo = {
     sourceCollection?: string | null;
     sourceReference?: string | null;
     sourceLink?: string | null;
+    googleStreetViewEmbedLink: string;
     tags: Tag[];
     coordinates: [number, number]
     compassDirection: number;
