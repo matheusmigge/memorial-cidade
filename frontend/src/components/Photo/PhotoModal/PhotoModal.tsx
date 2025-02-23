@@ -1,5 +1,6 @@
 import React from "react";
 import Photo from "../../../models/Photo";
+import PhotoTags from "../PhotoTags/PhotoTags"
 import "./PhotoModal.css";
 
 interface PhotoModalProps {
@@ -25,6 +26,8 @@ function PhotoModal({ photo, isOpen, onClose }: PhotoModalProps) {
             </h1>
             <h2>© {photo.sourceCollection}</h2>
           </div>
+
+          <PhotoTags photo={photo}></PhotoTags>
 
           <div className="contributor-section">
             <h1>Comentário</h1>

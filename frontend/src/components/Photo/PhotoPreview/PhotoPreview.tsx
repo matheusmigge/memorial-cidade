@@ -2,6 +2,7 @@ import "./PhotoPreview.css";
 import React from "react";
 import { Popup } from "react-leaflet";
 import Photo from "../../../models/Photo";
+import PhotoTags from "../PhotoTags/PhotoTags";
 
 interface PhotoPreviewProps {
   photo: Photo;
@@ -10,7 +11,6 @@ interface PhotoPreviewProps {
 
 function PhotoPreview({ photo, onClick }: PhotoPreviewProps) {
   
-
   return (
     <Popup>
       <div className="photo-preview">
@@ -35,14 +35,7 @@ function PhotoPreview({ photo, onClick }: PhotoPreviewProps) {
           </p>
         </div>
 
-        <div className="tag-container">
-          {photo.tags.map((tag) => (
-            <button key={tag.id} className="tag">
-              <img src={tag.category.iconURL} />
-              <h1>{tag.name}</h1>
-            </button>
-          ))}
-        </div>
+        <PhotoTags photo={photo}/>
       </div>
     </Popup>
   );
