@@ -5,16 +5,24 @@ import Photo from "../../../models/Photo";
 
 interface PhotoPreviewProps {
   photo: Photo;
+  onClick: () => void;
 }
 
-function PhotoPreview({ photo }: PhotoPreviewProps) {
+function PhotoPreview({ photo, onClick }: PhotoPreviewProps) {
+  
+
   return (
     <Popup>
       <div className="photo-preview">
         <div className="photo-container">
           <img className="photo-img" src={photo.url} />
 
-          <button className="see-photo-button">ver foto</button>
+          <button
+            className="see-photo-button"
+            onClick={() => onClick()}
+          >
+            ver foto
+          </button>
         </div>
 
         <div className="text-container">

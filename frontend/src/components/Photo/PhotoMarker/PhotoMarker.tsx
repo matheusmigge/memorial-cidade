@@ -8,9 +8,10 @@ import PhotoPolygon from "../PhotoPolygon/PhotoPolygon";
 
 interface PhotoMarkerProps {
   photo: Photo;
+  onClick: () => void;
 }
 
-function PhotoMarker({ photo }: PhotoMarkerProps) {
+function PhotoMarker({ photo, onClick }: PhotoMarkerProps) {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   const customIcon = L.divIcon({
@@ -38,7 +39,7 @@ function PhotoMarker({ photo }: PhotoMarkerProps) {
           popupclose: () => setIsPopupOpen(false),
         }}
       >
-        <PhotoPreview photo={photo} />
+        <PhotoPreview photo={photo} onClick={onClick} />
 
         {isPopupOpen && <PhotoPolygon photo={photo} />}
       </Marker>
