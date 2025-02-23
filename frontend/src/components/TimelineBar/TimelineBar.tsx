@@ -38,7 +38,7 @@ function TimelineBar() {
         <div className="content" ref={scrollRef}>
           {decades.map((decade) => (
             <button
-              className="decade-button"
+              className="decade-button" key={decade.id}
               style={{
                 backgroundColor: decade.backgroundColorHex,
                 color: decade.fontColorHex,
