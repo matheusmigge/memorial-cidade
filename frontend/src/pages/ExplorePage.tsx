@@ -4,6 +4,7 @@ import { MapContainer, TileLayer } from "react-leaflet";
 import React, { useEffect, useState } from "react";
 import PhotoMarker from "../components/Photo/PhotoMarker/PhotoMarker";
 import PhotoModal from "../components/Photo/PhotoModal/PhotoModal";
+import TimelineBar from "../components/TimelineBar/TimelineBar";
 
 function ExplorePage() {
   const [photos, setPhotos] = useState<Photo[]>([]);
@@ -15,10 +16,6 @@ function ExplorePage() {
     setPhotos(data);
   };
 
-  useEffect(() => {
-    fetchPhotos();
-  }, []);
-
   function handleSeePhotoClick(photo: Photo) {
     setSelectedPhoto(photo);
   }
@@ -27,9 +24,17 @@ function ExplorePage() {
     setSelectedPhoto(null);
   }
 
+  useEffect(() => {
+    fetchPhotos();
+  }, []);
+
   return (
     <>
-      <PhotoModal isOpen={!!selectedPhoto} onClose={handleSeePhotoClose} photo={selectedPhoto} />
+      <PhotoModal
+        isOpen={!!selectedPhoto}
+        onClose={handleSeePhotoClose}
+        photo={selectedPhoto}
+      />
 
       <MapContainer
         center={[-8.0433112, -34.934217]}
@@ -49,6 +54,8 @@ function ExplorePage() {
           />
         ))}
       </MapContainer>
+
+      <TimelineBar/>
     </>
   );
 }

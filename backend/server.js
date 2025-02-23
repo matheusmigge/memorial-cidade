@@ -2,7 +2,6 @@ const cors = require('cors');
 const express = require("express");
 const fs = require("fs");
 const path = require("path");
-
 const app = express();
 app.use(express.json());
 
@@ -78,6 +77,11 @@ const getPhotoWithDetails = (
 };
 
 app.use(cors());
+
+app.get("/decades", (req, res) => {
+  const decades = loadJson("decades.json");
+  res.json(decades);
+});
 
 // Rota GET para listar todas as fotos com detalhes
 app.get("/photos", (req, res) => {

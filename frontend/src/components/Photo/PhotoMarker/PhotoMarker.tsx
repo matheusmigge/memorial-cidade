@@ -17,7 +17,7 @@ function PhotoMarker({ photo, onClick }: PhotoMarkerProps) {
   const customIcon = L.divIcon({
     className: "photo-marker",
     html: `<div class="marker-circle" style="background-color: ${
-      photo.decades[0].colorHex
+      photo.decades[0].backgroundColorHex
     }; border: 4px solid ${isPopupOpen ? "black" : "white"};">
                     <img src="${
                       photo.viewSubcategory.iconURL

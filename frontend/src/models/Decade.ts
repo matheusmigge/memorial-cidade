@@ -1,7 +1,8 @@
 export type Decade = {
     id: number;
     name: string;
-    colorHex: string;
+    backgroundColorHex: string;
+    fontColorHex: string;
     yearStart: number;
     yearEnd: number;
 }
