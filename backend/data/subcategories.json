@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Vista áerea",
+        "iconURL": "/assets/shooting-angles/aerial.svg",
+        "categoryId": 2
+    },
+    {
+        "id": 2,
+        "name": "Vista do alto",
+        "iconURL": "/assets/shooting-angles/high-angle.svg",
+        "categoryId": 2 
+    },
+    {
+        "id": 3,
+        "name": "Vista da rua",
+        "iconURL": "/assets/shooting-angles/ground-level.svg",
+        "categoryId": 2 
+    }
+]

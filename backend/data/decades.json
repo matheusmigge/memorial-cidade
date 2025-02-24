@@ -1,0 +1,99 @@
+[
+    {
+      "id": 1,
+      "name": "<1900s",
+      "backgroundColorHex": "#D9ED92",
+      "fontColorHex": "black",
+      "yearStart": 1,
+      "yearEnd": 1899
+    },
+    {
+      "id": 2,
+      "name": "1900s",
+      "backgroundColorHex": "#B5E48C",
+      "fontColorHex": "black",
+      "yearStart": 1900,
+      "yearEnd": 1909
+    },
+    {
+      "id": 3,
+      "name": "1910s",
+      "backgroundColorHex": "#99D98C",
+      "fontColorHex": "black",
+      "yearStart": 1910,
+      "yearEnd": 1919
+    },
+    {
+      "id": 4,
+      "name": "1920s",
+      "backgroundColorHex": "#76C893",
+      "fontColorHex": "black",
+      "yearStart": 1920,
+      "yearEnd": 1929
+    },
+    {
+      "id": 5,
+      "name": "1930s",
+      "backgroundColorHex": "#52B69A",
+      "fontColorHex": "black",
+      "yearStart": 1930,
+      "yearEnd": 1939
+    },
+    {
+      "id": 6,
+      "name": "1940s",
+      "backgroundColorHex": "#34A0A4",
+      "fontColorHex": "black",
+      "yearStart": 1940,
+      "yearEnd": 1949
+    },
+    {
+      "id": 7,
+      "name": "1950s",
+      "backgroundColorHex": "#168AAD",
+      "fontColorHex": "white",
+      "yearStart": 1950,
+      "yearEnd": 1959
+    },
+    {
+      "id": 8,
+      "name": "1960s",
+      "backgroundColorHex": "#1A759F",
+      "fontColorHex": "white",
+      "yearStart": 1960,
+      "yearEnd": 1969
+    },
+    {
+      "id": 9,
+      "name": "1970s",
+      "backgroundColorHex": "#1E6091",
+      "fontColorHex": "white",
+      "yearStart": 1970,
+      "yearEnd": 1979
+    },
+    {
+      "id": 10,
+      "name": "1980s",
+      "backgroundColorHex": "#184E77",
+      "fontColorHex": "white",
+      "yearStart": 1980,
+      "yearEnd": 1989
+    },
+    {
+      "id": 11,
+      "name": "1990s",
+      "backgroundColorHex": "#113775",
+      "fontColorHex": "white",
+      "yearStart": 1990,
+      "yearEnd": 1999
+    },
+    {
+      "id": 12,
+      "name": ">2000s",
+      "backgroundColorHex": "#0A2133",
+      "fontColorHex": "white",
+      "yearStart": 2000,
+      "yearEnd": 3000
+    }
+  ]
+  

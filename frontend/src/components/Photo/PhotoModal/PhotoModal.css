@@ -1,0 +1,135 @@
+.photo-modal {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.photo-modal .fog-background {
+  position: absolute;
+  z-index: 1001;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.photo-modal .photo-container {
+  position: absolute;
+  display: flex;
+  z-index: 1001;
+  bottom: 5vh;
+  height: 86vh;
+  width: 95vw;
+  max-width: 1000px;
+  background-color: black;
+  border-radius: 20px;
+  padding: 30px 10px;
+}
+
+.photo-modal .details-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 25%;
+  min-width: 200px;
+  padding-inline: 20px;
+  color: white;
+  gap: 50px;
+  overflow: scroll;
+}
+
+.photo-modal .details-container::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.photo-modal .details-container .title-section h1 {
+  font-size: 24px;
+}
+
+.photo-modal .details-container .contributor-section h1 {
+  font-size: 24px;
+}
+
+.photo-modal .details-container .source-section h1 {
+  font-size: 24px;
+}
+
+.photo-modal .details-container p {
+  font-size: 16px;
+  font-weight: 100;
+}
+
+.photo-modal .details-container .title-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.photo-modal .details-container .contributor-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.photo-modal .details-container .contributor-section .comment {
+  font-style: italic;
+  font-size: 18px;
+}
+
+.photo-modal .details-container .source-section {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.photo-modal .details-container .source-section a {
+  color: white;
+  font-style: italic;
+}
+
+.photo-modal .scrollable-container {
+  height: 100%;
+  width: 75%;
+  padding: 10px;
+  overflow-y: auto;
+}
+
+.photo-modal .scrollable-container .google-street-view-embed {
+  width: 100%;
+  height: 80%;
+  border: 0;
+  border-radius: 20px;
+}
+
+.photo-modal .scrollable-container .img {
+  object-fit: contain;
+  width: 100%;
+  border-radius: 20px;
+  margin-bottom: 20px;
+}
+
+.photo-modal .close-button {
+  position: absolute;
+  z-index: 1001;
+  cursor: pointer;
+  background: none;
+  border: none;
+  top: 20px;
+  right: 3vw;
+}
+
+.photo-modal .scrollable-container::-webkit-scrollbar {
+  width: 15px;
+}
+
+.photo-modal .scrollable-container::-webkit-scrollbar-thumb {
+  background: rgba(128, 128, 128, 0.384);
+  border-radius: 20px;
+}
+
+.photo-modal .scrollable-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

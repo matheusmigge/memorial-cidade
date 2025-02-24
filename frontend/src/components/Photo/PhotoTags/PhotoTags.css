@@ -1,0 +1,26 @@
+.photo-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.photo-tags .tag {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px;
+  background-color: #757575;
+  color: white;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.photo-tags .tag img {
+  height: 20px;
+}
+
+.photo-tags .tag h1 {
+  font-size: 14px;
+  text-align: left;
+}
