@@ -25,6 +25,7 @@
   max-width: 1000px;
   background-color: black;
   border-radius: 20px;
+  padding: 30px 10px;
 }
 
 .photo-modal .details-container {
@@ -33,9 +34,15 @@
   height: 100%;
   width: 25%;
   min-width: 200px;
-  padding: 25px;
+  padding-inline: 20px;
   color: white;
   gap: 50px;
+  overflow: scroll;
+}
+
+.photo-modal .details-container::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }
 
 .photo-modal .details-container .title-section h1 {
@@ -50,7 +57,7 @@
   font-size: 24px;
 }
 
-.photo-modal .details-container h2 {
+.photo-modal .details-container p {
   font-size: 16px;
   font-weight: 100;
 }
@@ -69,7 +76,7 @@
 
 .photo-modal .details-container .contributor-section .comment {
   font-style: italic;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .photo-modal .details-container .source-section {
@@ -86,8 +93,7 @@
 .photo-modal .scrollable-container {
   height: 100%;
   width: 75%;
-  padding-top: 20px;
-  padding-right: 10px;
+  padding: 10px;
   overflow-y: auto;
 }
 

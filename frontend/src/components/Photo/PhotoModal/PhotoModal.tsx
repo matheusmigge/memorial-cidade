@@ -24,7 +24,7 @@ function PhotoModal({ photo, isOpen, onClose }: PhotoModalProps) {
               {photo.yearStart}
               {photo.yearEnd ? `~${photo.yearEnd}` : ""} - {photo.title}
             </h1>
-            <h2>© {photo.sourceCollection}</h2>
+            <p>© {photo.sourceCollection}</p>
           </div>
 
           <PhotoTags photo={photo}></PhotoTags>
@@ -33,7 +33,7 @@ function PhotoModal({ photo, isOpen, onClose }: PhotoModalProps) {
             <h1>Comentário</h1>
             <p className="comment">"{photo.contributorComment}"</p>
             <p className="autor">
-              Contribuição de {photo.contributorName} <br />
+              Contribuição de {photo.contributorName}.
               Publicado em{" "}
               {new Date(photo.publicationDate).toLocaleDateString()}.
             </p>
