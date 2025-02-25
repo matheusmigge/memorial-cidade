@@ -2,7 +2,7 @@ import "./PhotoMarker.css"
 import { Marker } from "react-leaflet";
 import Photo from "../../../models/Photo";
 import PhotoPreview from "../PhotoPreview/PhotoPreview";
-import React, { useState } from "react";
+import { useState } from "react";
 import L from "leaflet";
 import PhotoPolygon from "../PhotoPolygon/PhotoPolygon";
 

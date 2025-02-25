@@ -1,6 +1,5 @@
 import { Polygon } from "react-leaflet";
 import Photo from "../../../models/Photo";
-import React from "react";
 
 interface PhotoViewProps {
   photo: Photo;

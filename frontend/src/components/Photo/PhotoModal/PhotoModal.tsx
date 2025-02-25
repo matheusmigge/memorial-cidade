@@ -1,4 +1,3 @@
-import React from "react";
 import Photo from "../../../models/Photo";
 import PhotoTags from "../PhotoTags/PhotoTags"
 import "./PhotoModal.css";

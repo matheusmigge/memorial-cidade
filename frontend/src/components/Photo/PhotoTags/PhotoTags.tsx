@@ -1,5 +1,4 @@
 import "./PhotoTags.css"
-import React from "react";
 import Photo from "../../../models/Photo";
 
 interface PhotoTagsProps {

@@ -1,7 +1,7 @@
 import "./ExplorePage.css";
 import Photo from "../models/Photo";
 import { MapContainer, TileLayer } from "react-leaflet";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import PhotoMarker from "../components/Photo/PhotoMarker/PhotoMarker";
 import PhotoModal from "../components/Photo/PhotoModal/PhotoModal";
 import TimelineBar from "../components/TimelineBar/TimelineBar";

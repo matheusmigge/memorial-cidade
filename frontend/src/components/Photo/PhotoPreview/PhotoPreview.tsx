@@ -1,5 +1,4 @@
 import "./PhotoPreview.css";
-import React from "react";
 import { Popup } from "react-leaflet";
 import Photo from "../../../models/Photo";
 import PhotoTags from "../PhotoTags/PhotoTags";

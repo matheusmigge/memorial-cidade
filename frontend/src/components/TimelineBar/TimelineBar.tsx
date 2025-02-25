@@ -1,5 +1,5 @@
 import "./TimelineBar.css"
-import React, { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Decade from "../../models/Decade";
 
 function TimelineBar() {
