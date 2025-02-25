@@ -5,7 +5,7 @@ const path = require("path");
 const app = express();
 app.use(express.json());
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Função para carregar dados JSON
 const loadJson = (file) => {
