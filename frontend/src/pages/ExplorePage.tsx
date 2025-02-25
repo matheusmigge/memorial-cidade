@@ -11,7 +11,7 @@ function ExplorePage() {
   const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
 
   const fetchPhotos = async () => {
-    const response = await fetch("http://localhost:3000/photos");
+    const response = await fetch("https://memorial-cidade-backend-production.up.railway.app/photos");
     const data = await response.json();
     setPhotos(data);
   };

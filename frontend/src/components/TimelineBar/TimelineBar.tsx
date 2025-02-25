@@ -6,7 +6,7 @@ function TimelineBar() {
   const [decades, setDecades] = useState<Decade[]>([]);
 
   const fetchDecades = async () => {
-    const response = await fetch("http://localhost:3000/decades");
+    const response = await fetch("https://memorial-cidade-backend-production.up.railway.app/decades");
     const data = await response.json();
     setDecades(data);
   };
