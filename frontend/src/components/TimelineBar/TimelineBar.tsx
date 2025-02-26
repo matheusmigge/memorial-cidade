@@ -12,16 +12,17 @@ function TimelineBar() {
   };
 
   const scrollRef = useRef<HTMLDivElement>(null);
+  const buttonScrollAmount = 230;
 
   const scrollLeft = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollLeft -= 350;
+      scrollRef.current.scrollLeft -= buttonScrollAmount;
     }
   };
 
   const scrollRight = () => {
     if (scrollRef.current) {
-      scrollRef.current.scrollLeft += 350;
+      scrollRef.current.scrollLeft += buttonScrollAmount;
     }
   };
 
