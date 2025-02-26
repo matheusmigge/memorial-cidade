@@ -32,18 +32,33 @@
   align-items: center;
   height: 100%;
   width: 54vw;
-  overflow-x: hidden;
+  overflow-x: scroll;
   scroll-behavior: smooth;
   border-radius: 50px;
+}
+
+.timeline-bar .content::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
 }
 
 .timeline-bar .content .decade-button {
   font-size: 18px;
   font-weight: bold;
-  height: 40px;
+  height: 80%;
   padding-inline: 45px;
   margin-left: -16px;
   margin-right: -16px;
   border: none;
   border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .timeline-bar .border {
+    width: 90vw;
+  }
+
+  .timeline-bar .content {
+    width: 84vw;
+  }
 }

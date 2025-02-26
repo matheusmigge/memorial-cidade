@@ -37,8 +37,8 @@ function ExplorePage() {
       />
 
       <MapContainer
-        center={[-8.0433112, -34.934217]}
-        zoom={13}
+        center={[-8.063421, -34.879000]}
+        zoom={14}
         className="map-container"
       >
         <TileLayer

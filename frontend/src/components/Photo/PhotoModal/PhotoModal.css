@@ -26,6 +26,7 @@
   background-color: black;
   border-radius: 20px;
   padding: 30px 10px;
+  gap: 20px 0px;
 }
 
 .photo-modal .details-container {
@@ -34,9 +35,9 @@
   height: 100%;
   width: 25%;
   min-width: 200px;
-  padding-inline: 20px;
+  padding-inline: 15px;
   color: white;
-  gap: 50px;
+  gap: 35px 0px;
   overflow: scroll;
 }
 
@@ -45,15 +46,7 @@
   height: 0px;
 }
 
-.photo-modal .details-container .title-section h1 {
-  font-size: 24px;
-}
-
-.photo-modal .details-container .contributor-section h1 {
-  font-size: 24px;
-}
-
-.photo-modal .details-container .source-section h1 {
+.photo-modal .details-container .primary {
   font-size: 24px;
 }
 
@@ -97,18 +90,18 @@
   overflow-y: auto;
 }
 
-.photo-modal .scrollable-container .google-street-view-embed {
-  width: 100%;
-  height: 80%;
-  border: 0;
-  border-radius: 20px;
-}
-
 .photo-modal .scrollable-container .img {
   object-fit: contain;
   width: 100%;
   border-radius: 20px;
   margin-bottom: 20px;
+}
+
+.photo-modal .scrollable-container .google-street-view-embed {
+  width: 100%;
+  height: 80%;
+  border: 0;
+  border-radius: 20px;
 }
 
 .photo-modal .close-button {
@@ -119,6 +112,10 @@
   border: none;
   top: 20px;
   right: 3vw;
+}
+
+.photo-modal .close-button img {
+  height: 30px;
 }
 
 .photo-modal .scrollable-container::-webkit-scrollbar {
@@ -132,4 +129,78 @@
 
 .photo-modal .scrollable-container::-webkit-scrollbar-thumb:hover {
   background: #555;
+}
+
+@media (max-width: 768px) {
+  .photo-modal .photo-container {
+    flex-direction: column;
+    overflow: scroll;
+  }
+
+  .photo-modal .details-container {
+    overflow: unset;
+    width: 100%;
+    gap: 20px;
+  }
+
+  .photo-modal .details-container .photo-tags {
+    overflow: scroll;
+  }
+
+  .photo-modal .details-container .photo-tags {
+    flex-wrap: nowrap;
+  }
+
+  .photo-modal .details-container .photo-tags .tag {
+    white-space: nowrap;
+  }
+
+  .photo-modal .details-container .photo-tags::-webkit-scrollbar {
+    height: 0px;
+  }
+
+  .photo-modal .details-container .tag img {
+    height: 15px;
+  }
+  .photo-modal .details-container .tag h1 {
+    font-size: 12px;
+  }
+
+  .photo-modal .details-container .primary {
+    font-size: 20px;
+  }
+
+  .photo-modal .details-container .secondary {
+    font-size: 14px;
+  }
+
+  .photo-modal .scrollable-container {
+    width: 100%;
+    overflow: unset;
+    padding-bottom: 10px;
+  }
+
+  .photo-modal .details-container .primary {
+    font-size: 18px;
+  }
+
+  .photo-modal .details-container .secondary {
+    font-size: 13px;
+  }
+
+  .photo-modal .details-container .title-section {
+    gap: 5px;
+  }
+
+  .photo-modal .details-container .contributor-section {
+    gap: 5px;
+  }
+
+  .photo-modal .details-container .source-section {
+    gap: 5px;
+  }
+
+  .photo-modal .scrollable-container .google-street-view-embed {
+    margin-bottom: 20px;
+  }
 }
