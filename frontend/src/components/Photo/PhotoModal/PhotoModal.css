@@ -135,6 +135,8 @@
   .photo-modal .photo-container {
     flex-direction: column;
     overflow: scroll;
+    width: 100vw;
+    padding: 30px 0px;
   }
 
   .photo-modal .details-container {
