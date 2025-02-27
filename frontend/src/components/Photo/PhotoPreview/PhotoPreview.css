@@ -82,21 +82,12 @@
   .photo-preview .photo-tags {
     flex-wrap: nowrap;
     overflow-x: scroll;
+    padding-bottom: 5px;
   }
 
   .photo-preview .photo-tags::-webkit-scrollbar {
     height: 0px;
   }
-  
-  .photo-preview .photo-tags::-webkit-scrollbar-thumb {
-    background: rgba(128, 128, 128, 0.384);
-    border-radius: 10px;
-  }
-  
-  .photo-preview .photo-tags::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-
   .photo-preview .text-container h1 {
     font-size: 14px;
   }
