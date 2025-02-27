@@ -48,7 +48,15 @@ function PhotoModal({ photo, isOpen, onClose }: PhotoModalProps) {
           </div>
         </div>
         <div className={`scrollable-container`}>
-          <img className={`img`} src={photo.url}></img>
+          <a
+            className="secondary"
+            href={photo.url}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img className={`img`} src={photo.url}></img>
+          </a>
+
           <iframe
             className={`google-street-view-embed`}
             src={photo.googleStreetViewEmbedLink}
