@@ -1,7 +1,7 @@
 [
     {
         "id": 1,
-        "viewSubcategoryId": 3,
+        "viewSubcategoryId": 1,
         "url": "https://blogs.diariodepernambuco.com.br/diretodaredacao/wp-content/uploads/2017/02/m_berzin.jpg",
         "yearStart": 1934,
         "yearEnd": null,
@@ -20,7 +20,7 @@
     },
     {
         "id": 2,
-        "viewSubcategoryId": 3,
+        "viewSubcategoryId": 1,
         "url": "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEiHx3Sgrqkx7cspwUT5GGWyZeC6nnoJsubAJZLGWTUyOiiwztHG4hwHeUbuwKZLO3skhXLEMenaN82nnnQql-17zQ-aLqKVamSNvltiTy9EU_ckDdSZY0D2bJUJ67Wj3ybsEqz1ZgRdnS8/s640/RECIFE+NOITE+5.webp",
         "yearStart": 1970,
         "yearEnd": 1979,

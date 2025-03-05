@@ -9,7 +9,7 @@
         "id": 2,
         "name": "Vistas",
         "iconURL": "/assets/view.svg",
-        "subcategoryIds": [1,2,3]
+        "subcategoryIds": [1, 2, 3]
     },
     {
         "id": 3,
@@ -33,6 +33,12 @@
         "id": 6,
         "name": "Especiais",
         "iconURL": "/assets/special.svg",
+        "subcategoryIds": null
+    },
+    {
+        "id": 7,
+        "name": "Fotógrafos",
+        "iconURL": "/assets/photographer.svg",
         "subcategoryIds": null
     }
 ]
